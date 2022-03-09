@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ragan</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
+        integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"
+        integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
+        integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/f68edb3f76.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="introMain position-absolute" id="introMain">
+        <div class="d-flex justify-content-center">
+            <i class="fas fa-chevron-circle-down fa-2x position-absolute" id="dragArrow"></i>
+        </div>
+        <div class="introContainer">
+            <div class="intro d-flex align-items-center position-relative" id="intro">
+                <div class="introBox d-flex flex-column">
+                    <div class="intro-text-container "><span class="nameText pb-2">Ragan</span></div>
+                    <div class="intro-text-container"><span class="smallSpan">Developer's Portfolio</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <main id="main">
+        <nav class=" p-2 px-sm-3 w-100 mx-0 py-sm-3" id="navbar">
+            <div class="row w-100 mx-0 d-flex align-items-center position-relative ">
+                <div class="navName d-none d-md-flex position-absolute" id="navName">Ragan Lamoc</div>
+                <div class=" d-flex mx-auto position-relative">
+                    <!-- <ul class="navBtn d-flex flex-row m-0 align-items-center position-relative">
+                        <li class="navBtn px-3 m-0 mx-sm-3 activeTab">INTRO</li>
+                        <li class="navBtn px-3 m-0 mx-sm-3">SKILLS</li>
+                        <li class="navBtn px-3 m-0 mx-sm-3">PROJECTS</li>
+                    </ul> -->
+                    <div class="navAnimation" id="navAnimation"></div>
+                    <a role="button" class="navBtn px-3 d-flex align-items-center focus">INTRO</a>
+                    <a role="button" class="navBtn px-3 d-flex align-items-center">SKILLS</a>
+                    <a role="button" class="navBtn px-3 d-flex align-items-center">PROJECTS</a>
+                </div>
+                <!-- <div class=" ">Contacts here</div> -->
+            </div>
+        </nav>
+
+        <section id="section">
+            <img src="assets/stars.png" alt="" id="stars">
+            <img src="assets/moon.png" alt="" id="moon">
+            <img src="assets/mountain1.png" alt="" id="m1">
+            <img src="assets/mountain2.png" alt="" id="m2">
+            <img src="assets/mountain3.png" alt="" id="m3">
+            <img src="assets/ground.png" alt="" id="ground">
+            <div class="headerTextContainer ml-2 ml-sm-5">
+                <div id="introName">Hi, I'm Ragan C. Lamoc</div>
+                <div id="introSub">scroll down to learn more about me</div>
+            </div>
+
+
+
+        </section>
+
+
+        <div class="bottomIcons">
+            <i class="fas fa-grip-lines line1 position-absolute"></i>
+            <i class="fas fa-grip-lines line2 position-absolute"></i>
+            <i class="fas fa-caret-down position-absolute"></i>
+        </div>
+
+        <div class="contents " id="contents">
+            <div class="row my-3 my-md-3 w-100 mx-0 px-1 px-sm-2 px-lg-5 d-flex flex-row justify-content-center"
+                id="contentAbout">
+                <div class="sectionTitle col-12 text-center px-0 mb-4" id="titleAbout">About Me</div>
+                <div class="px-2 px-sm-5 sectionText col-11 col-lg-9"><i class="fas fa-map-marker-alt  mr-1 mr-sm-3"
+                        id="pinIcon"></i> <span id="txtLocation"> Based in Caloocan City,
+                        Philippines</span></div>
+                <div class="px-2 px-sm-5 sectionText sectionText col-11 col-lg-9 mt-2 mt-sm-4"><i
+                        class="fas fa-user-graduate mr-1 mr-sm-3" id="educIcon"></i> <span id="txtEduc">Bachelor of
+                        Science in
+                        Information Technology</span>
+                </div>
+
+                <div class="px-2 px-sm-5 sectionText sectionText col-11 col-lg-9 my-2 my-sm-4"><i
+                        class="fas fa-briefcase mr-1 mr-sm-3" id="workIcon"></i> <span id="txtWork">Work
+                        Experience:</span>
+
+                    <div class="my-md-2 ml-md-5" id="txtWork1">Tagani PH &#9679; Software Engineer Intern &#9679;
+                        9/23/2020 -
+                        11/23/2020
+                    </div>
+                </div>
+                <div class="px-2 px-sm-5 sectionText col-11 col-lg-9" id="txtAbout">I love programming in general. I
+                    love solving
+                    programming
+                    problems
+                    online. I
+                    have learned multiple programming languages and concepts on my own. Web development is also my
+                    thing. I can do a fully fucntioning website even its back end components. I have knowledge in MERN
+                    stack and use other databases like MySQL.
+                </div>
+
+
+            </div>
+
+            <div class=" row my-3 mt-md-5 mb-md-3 w-100 mx-0 px-1 px-sm-2 px-lg-5 d-flex flex-row
+                        justify-content-center">
+                <div class="sectionTitle col-12 text-center px-0 mb-2" id="titleSkills">Skills</div>
+
+                <div class="px-2 px-sm-5 col-11 col-lg-10 sectionSubText text-center" id="txtSkills">
+                    here are some of programming languages, DBMS, and libraries that I mostly use
+                </div>
+                <div class="my-2 my-sm-4 d-flex justify-content-center align-items-center w-75 imgSkillContainer"
+                    id="imgSkillContainer">
+                    <img id="imgPy" class="skillLogo" src="assets/python.png" alt="" width="100" height="100">
+                    <img id="imgJs" class="skillLogo" src="assets/javascript.png" alt="" width="100" height="100">
+                    <img id="imgJa" class="skillLogo" src="assets/java.png" alt="" width="100" height="100">
+                    <img id="imgPh" class="skillLogo" src="assets/php.png" alt="" height="100">
+                    <img id="imgC" class="skillLogo" src="assets/c.png" alt="" width="100" height="100">
+                    <img id="imgMy" class="skillLogo" src="assets/mysql.png" alt="" height="100">
+                    <img id="imgMo" class="skillLogo" src="assets/mongodb.png" alt="" height="100">
+                    <img id="imgRe" class="skillLogo " src="assets/react.png" alt="" width="100" height="100">
+                    <img id="imgGear" class="gearLogo " src="assets/gear1.png" alt="" width="200" height="200">
+                </div>
+                <div class="px-2 px-sm-5 col-11 col-lg-10 sectionSubText text-center" id="txtSkills">
+                    I can also use libraries and packages of these programming languages and apply to my
+                    projects. As an
+                    example, I
+                    have created multiple web application projects done using MERN stack.
+                </div>
+
+            </div>
+
+            <div class="row mt-5  mb-md-3 w-100 mx-0 px-1 px-sm-2 px-lg-5 d-flex flex-row justify-content-center">
+                <div class="sectionTitle col-12 text-center px-0 mb-2" id="titleProjects">Projects</div>
+                <div class="px-2 px-sm-5 col-11 col-lg-10 sectionText col-11 col-sm-9  text-center" id="txtProjects">
+                    Here are
+                    some of my
+                    academic and
+                    personal projects.
+                </div>
+
+
+                <div
+                    class="px-2 px-sm-5  col-11  col-xl-9 mt-3 d-flex flex-column flex-md-row flex-wrap justify-content-between ">
+
+                    <div class="cardDev my-3 p-2">
+                        <div>
+                            <img id="projImg" class="cardImg" src="assets/sort-algo.png" alt="">
+                            <div class="cardTitle w-100 my-2 text-center">Sorting Algorithm Visualizer</div>
+                            <div class="cardDescription px-2">This project was made to visualize how certain
+                                sorting
+                                algorithms work. The animations were made using setTimeout and setInterval with
+                                recursion. The project is at this link ->
+                                <a href="https://gansukii.github.io/Sorting-Algo-Visualizer-/" target="_blank"
+                                    rel="noopener noreferrer">https://gansukii.github.io/Sorting-Algo-Visualizer-/</a>
+                            </div>
+                            <button id="cardBtn" class="w-100 cardBtn btn-dark">TOOLS USED >></button>
+                        </div>
+                        <div class="toolsUsed h-100 d-none position-relative">
+                            <div class="py-3 toolsImgContainer">
+                                <img src="assets/javascript.png" alt="" width="100" height="100">
+                                <img src="assets/css.png" alt="" height="100">
+                            </div>
+                            <button id="cardBtnBack"
+                                class="w-100 cardBtn btn-dark d-flex mt-auto cardBtnBack justify-content-center">
+                                &lt;&lt;
+                                BACK
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cardDev my-3 p-2">
+                        <div>
+                            <img id="projImg" class="cardImg" src="assets/tentaizu.png" alt="">
+                            <div class="cardTitle w-100 my-2 text-center">Tentaizu Puzzle Solver</div>
+                            <div class="cardDescription px-2">Tentaizu is a game similar to minesweeper. Its
+                                goal is to
+                                find all of the stars hidden in the board using the given clues. The project
+                                uses python
+                                to find the solution for any valid 9x9 tentaizu puzzle. The github repository of
+                                the
+                                project is located at -> <a href="https://github.com/Gansukii/Tentaizu-Solver"
+                                    target="_blank"
+                                    rel="noopener noreferrer">https://github.com/Gansukii/Tentaizu-Solver</a>
+                            </div>
+                            <button id="cardBtn" class="w-100 cardBtn btn-dark">TOOLS USED >></button>
+                        </div>
+                        <div class="toolsUsed h-100 d-none position-relative">
+                            <div class="toolsContainer pb-4">
+                                <div class="py-3 toolsImgContainer">
+                                    <img src="assets/python.png" alt="" width="100" height="100">
+                                </div>
+                            </div>
+                            <button id="cardBtnBack"
+                                class="w-100 cardBtn btn-dark d-flex mt-auto cardBtnBack justify-content-center">
+                                &lt;&lt;
+                                BACK
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cardDev my-3 p-2">
+                        <div>
+                            <img id="projImg" class="cardImg" src="assets/tentaizuVisual.png" alt="">
+                            <div class="cardTitle w-100 my-2 text-center">Tentaizu Puzzle Solver Visualizer
+                            </div>
+                            <div class="cardDescription px-2">This is an improved version of my tentaizu solver
+                                where I
+                                used pygame library to visualize what is happening during the process.
+                                <!-- -> <a
+                                    href="https://github.com/Gansukii/Tentaizu-Solver" target="_blank"
+                                    rel="noopener noreferrer">https://github.com/Gansukii/Tentaizu-Solver</a> -->
+                            </div>
+                            <button id="cardBtn" class="w-100 cardBtn btn-dark">TOOLS USED >></button>
+                        </div>
+                        <div class="toolsUsed h-100 d-none position-relative">
+                            <div class="toolsContainer pb-4">
+                                <div class="py-3 toolsImgContainer">
+                                    <img src="assets/python.png" alt="" width="100" height="100">
+                                    <img src="assets/pygame.png" alt="" height="100">
+                                </div>
+                            </div>
+                            <button id="cardBtnBack"
+                                class="w-100 cardBtn btn-dark d-flex mt-auto cardBtnBack justify-content-center">
+                                &lt;&lt;
+                                BACK
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cardDev my-3 p-2">
+                        <div>
+                            <img id="projImg" class="cardImg" src="assets/pos.png" alt="">
+                            <div class="cardTitle w-100 my-2 text-center">Personalized Printing POS System</div>
+                            <div class="cardDescription px-2">This project was done for a personalized printing
+                                business. It is a POS system
+                                where users can input the number of orders, arrange pick-ups, see statistics,
+                                adding
+                                customer data, and organize the inventory. It was made using vanilla JS, PHP,
+                                and MySQL.
+                            </div>
+                            <button id="cardBtn" class="w-100 mt-2 cardBtn btn-dark">TOOLS USED >></button>
+                        </div>
+                        <div class="toolsUsed h-100 d-none position-relative">
+                            <div class="toolsContainer pb-4">
+                                <div class="py-3 toolsImgContainer">
+                                    <img src="assets/javascript.png" alt="" width="100" height="100">
+                                    <img src="assets/mysql.png" alt="" width="100" height="100">
+                                    <img src="assets/php.png" alt="" height="100">
+                                </div>
+                            </div>
+                            <button id="cardBtnBack"
+                                class="w-100 cardBtn btn-dark d-flex mt-auto cardBtnBack justify-content-center">
+                                &lt;&lt;
+                                BACK
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cardDev my-3 p-2">
+                        <div>
+                            <img id="projImg" class="cardImg" src="assets/iskolearning.png" alt="">
+                            <div class="cardTitle w-100 my-2 text-center">IskoLearning - Online Learning
+                                Platform</div>
+                            <div class="cardDescription px-2">IskoLearning is our project in IT Elective
+                                (project
+                                management) subject in the university where I was the full-stack developer. It
+                                is a
+                                forum and online learning platform inspired by Stack Overflow website and online
+                                course
+                                providers like Udemy. Hosting and back-end were handled using the firebase
+                                platform
+                                developed by Google for web applications. The project is being hosted at ->
+                                <a href="https://iskolearning.web.app/" target="_blank"
+                                    rel="noopener noreferrer">https://iskolearning.web.app/</a>
+
+                            </div>
+                            <button id="cardBtn" class="w-100 mt-2 cardBtn btn-dark">TOOLS USED >></button>
+                        </div>
+                        <div class="toolsUsed h-100 d-none position-relative">
+                            <div class="toolsContainer pb-4">
+                                <div class="py-3 toolsImgContainer">
+
+                                    <img src="assets/javascript.png" alt="" width="100" height="100">
+                                    <img src="assets/firebase.png" alt="" height="100">
+                                </div>
+                            </div>
+
+                            <button id="cardBtnBack"
+                                class="w-100 cardBtn btn-dark d-flex mt-auto cardBtnBack justify-content-center">
+                                &lt;&lt;
+                                BACK
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cardDev my-3 p-2">
+                        <div>
+                            <img id="projImg" class="cardImg" src="assets/ebus.jpeg" alt="">
+                            <div class="cardTitle w-100 my-2 text-center">e-BUS (Electronic Barangay Unified
+                                system)
+                            </div>
+                            <div class="cardDescription px-2"> e-BUS is our capstone project where I was the
+                                full-stack
+                                developer using the MERN stack. e-BUS is a web-based system that caters to
+                                multiple
+                                barangay systems in one
+                                platform. It aims to computerize the way of handling barangay processes as well
+                                as
+                                accommodate the needs of residents. This web-based system contains a lot of
+                                features
+                                that will solve numerous existing problems being encountered by most barangays,
+                                specifically the prolonged barangay processes. The project is being hosted at ->
+                                <a href="https://capstone-e-bus.herokuapp.com/" target="_blank"
+                                    rel="noopener noreferrer">https://capstone-e-bus.herokuapp.com/</a>
+
+                            </div>
+                            <button id="cardBtn" class="w-100 mt-2 cardBtn btn-dark">TOOLS USED >></button>
+                        </div>
+                        <div class="toolsUsed h-100 d-none position-relative">
+                            <div class="toolsContainer pb-4">
+                                <div class="py-3 toolsImgContainer">
+                                    <img src="assets/javascript.png" alt="" width="100" height="100">
+                                    <img src="assets/react.png" alt="" height="100">
+                                    <img src="assets/mongodb.png" alt="" height="100">
+                                    <img src="assets/express.png" alt="" height="100">
+                                    <img src="assets/nodejs.png" alt="" height="100">
+                                </div>
+                            </div>
+                            <button id="cardBtnBack"
+                                class="w-100 cardBtn btn-dark d-flex mt-auto cardBtnBack justify-content-center">
+                                &lt;&lt;
+                                BACK
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row mt-3 mt-md-5 pb-4 w-100 mx-0 px-1 px-sm-2 px-lg-5 d-flex flex-row justify-content-center"
+                id="contentAbout">
+                <div class="sectionTitle col-12 text-center px-0 mb-4" id="titleAbout">Contact Me</div>
+                <div class="px-2 px-sm-5 d-flex align-items-center sectionText col-11 col-lg-9"><i
+                        class="fas fa-envelope mr-1 mr-sm-3" id="emailIcon"></i>
+                    <div class="cursor-pointer contact d-flex p-2 " id="txtEmail">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        lamocragan@gmail.com
+                    </div>
+                </div>
+                <div
+                    class="px-2 px-sm-5 d-flex align-items-center sectionText sectionText col-11 col-lg-9 mt-2 mt-sm-4">
+                    <i class="fab fa-facebook-square mr-1 mr-sm-3" id="fbIcon"></i>
+                    <div class="cursor-pointer contact d-flex p-2 " id="txtFb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        www.facebook.com/rgnlmoc
+                    </div>
+                </div>
+                <div
+                    class="px-2 px-sm-5 d-flex align-items-center sectionText sectionText col-11 col-lg-9 my-2 my-sm-4">
+                    <i class="fab fa-github mr-1 mr-sm-3" id="githubIcon"></i>
+                    <div class="cursor-pointer contact d-flex p-2" id="txtGithub">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>https://github.com/Gansukii
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="controller.js"></script>
+    <script src="animate.js"></script>
+
+</body>
+
+</html>
