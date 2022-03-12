@@ -8,10 +8,12 @@
     <title>Ragan</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="main.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"
         integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,12 +34,15 @@
         integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://kit.fontawesome.com/f68edb3f76.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <div class="introMain position-absolute" id="introMain">
         <div class="d-flex justify-content-center">
-            <i class="fas fa-chevron-circle-down fa-2x position-absolute" id="dragArrow"></i>
+            <i class="fas fa-chevron-circle-down fa-2x position-absolute" id="dragArrow">
+                <div class="position-absolute devTooltip p-2">Click and drag down</div>
+            </i>
         </div>
         <div class="introContainer">
             <div class="intro d-flex align-items-center position-relative" id="intro">
@@ -101,16 +106,23 @@
                         id="pinIcon"></i> <span id="txtLocation"> Based in Caloocan City,
                         Philippines</span></div>
                 <div class="px-2 px-sm-5 sectionText sectionText col-11 col-lg-9 mt-2 mt-sm-4"><i
-                        class="fas fa-user-graduate mr-1 mr-sm-3" id="educIcon"></i> <span id="txtEduc">Bachelor of
-                        Science in
-                        Information Technology</span>
+                        class="fas fa-user-graduate mr-1 mr-sm-3" id="educIcon"></i> <span id="txtEduc">Education</span>
+                    <div class="my-md-2 ml-md-5" id="txtEduc1"> &#9679; Polytechnic University of the Philippines -
+                        Manila | BS Information Technology (2018 - Present)
+
+                    </div>
+                    <div class="my-md-2 ml-md-5" id="txtEduc2"> &#9679; Caloocan City Science High School | STEM Strand
+                        (2016 - 2018)
+
+                    </div>
                 </div>
 
                 <div class="px-2 px-sm-5 sectionText sectionText col-11 col-lg-9 my-2 my-sm-4"><i
                         class="fas fa-briefcase mr-1 mr-sm-3" id="workIcon"></i> <span id="txtWork">Work
-                        Experience:</span>
+                        Experience</span>
 
-                    <div class="my-md-2 ml-md-5" id="txtWork1">Tagani PH &#9679; Software Engineer Intern &#9679;
+                    <div class="my-md-2 ml-md-5" id="txtWork1">&#9679; Tagani PH | Software Engineer Intern
+                        |
                         9/23/2020 -
                         11/23/2020
                     </div>
@@ -121,7 +133,7 @@
                     problems
                     online. I
                     have learned multiple programming languages and concepts on my own. Web development is also my
-                    thing. I can do a fully fucntioning website even its back end components. I have knowledge in MERN
+                    thing. I can do a fully functioning website even its back end components. I have knowledge in MERN
                     stack and use other databases like MySQL.
                 </div>
 

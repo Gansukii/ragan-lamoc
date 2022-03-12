@@ -23,6 +23,8 @@ timeline2
   .fromTo("#txtLocation", 1, { x: -50, opacity: 0 }, { x: 0, opacity: 1 })
   .fromTo("#educIcon", 10, { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
   .fromTo("#txtEduc", 1, { x: -50, opacity: 0 }, { x: 0, opacity: 1 })
+  .fromTo("#txtEduc1", 10, { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
+  .fromTo("#txtEduc2", 10, { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
   .fromTo("#workIcon", 10, { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
   .fromTo("#txtWork", 1, { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
   .fromTo("#txtWork1", 10, { y: -50, opacity: 0 }, { y: 0, opacity: 1 })

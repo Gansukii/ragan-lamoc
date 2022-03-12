@@ -170,6 +170,37 @@ html {
   }
 }
 
+.devTooltip {
+  top: 50%;
+  left: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100px;
+  text-align: center;
+  background-color: var(--secondaryDark);
+  transform: translateY(-50%);
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.devTooltip::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: -8px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondaryDark);
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.fa-chevron-circle-down:hover .devTooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media only screen and (max-width: 768px) {
   .introBox {
     margin-left: 50px;
@@ -183,5 +214,8 @@ html {
   }
   .smallSpan {
     font-size: 25px;
+  }
+  .devTooltip {
+    display: none;
   }
 }
