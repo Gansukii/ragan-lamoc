@@ -32,8 +32,8 @@ timeline2
 
 let scene2 = new ScrollMagic.Scene({
   triggerElement: "#contentAbout",
-  duration: "40%",
-  triggerHook: 0.5,
+  duration: "25%",
+  // triggerHook: 0.5,
 })
   .setTween(timeline2)
   // .addIndicators()

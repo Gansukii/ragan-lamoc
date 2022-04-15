@@ -2,6 +2,8 @@ const draggableArrow = document.getElementById("dragArrow");
 const intro = document.getElementById("intro");
 const introMain = document.getElementById("introMain");
 const contents = document.getElementById("contents");
+const contentAbout = document.getElementById("contentAbout");
+const contentSkills = document.getElementById("contentSkills");
 
 const body = document.getElementsByTagName("body")[0];
 const moon = document.getElementById("moon");
@@ -98,6 +100,7 @@ navBtn.forEach((element) => {
     // };
     // currentTab.classList.add("focus");
     if (element === navBtn[0]) {
+      console.log("ngi click");
       window.scrollTo(0, 0);
     } else if (element === navBtn[1]) {
       window.scrollBy(0, titleSkills.getBoundingClientRect().top - navbar.getBoundingClientRect().height - 20);
@@ -110,7 +113,19 @@ navBtn.forEach((element) => {
   };
 });
 
+// let snapAllowed = true;
+// let toAboutDone = false;
+// let toAboutProcessing = false;
+// let topSnap;
+
 window.onscroll = () => {
+  // snapAllowed = true;
+
+  // if (topSnap) {
+  //   clearTimeout(topSnap);
+  // }
+  // toAboutProcessing = false;
+
   if (titleProjects.getBoundingClientRect().top <= 150) {
     currentTab.classList.remove("focus");
     currentTab.removeAttribute("style");
@@ -142,6 +157,64 @@ window.onscroll = () => {
     };
     currentTab.classList.add("focus");
   }
+
+  // const topLimit1 = Math.floor(
+  //   contentAbout.getBoundingClientRect().top +
+  //     scrollY -
+  //     navbar.getBoundingClientRect().height -
+  //     contentAbout.getBoundingClientRect().height / 4
+  // );
+  // const elementTop1 = Math.floor(contentAbout.getBoundingClientRect().top + scrollY - navbar.getBoundingClientRect().height);
+
+  // const bottomLimit1 = Math.floor(
+  //   contentAbout.getBoundingClientRect().top -
+  //     navbar.getBoundingClientRect().height +
+  //     scrollY +
+  //     contentAbout.getBoundingClientRect().height / 4
+  // );
+
+  // const values = {
+  //   topLimit: topLimit1,
+  //   elementTop: elementTop1,
+  //   bottomLimit: bottomLimit1,
+  // };
+
+  // const startTimeOut = (values) => {
+  //   topSnap = setTimeout(() => {
+  //     if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && toAboutProcessing) {
+  //       window.scrollTo({
+  //         top: values.elementTop,
+  //         left: 0,
+  //         behavior: "smooth",
+  //       });
+  //     } else {
+  //       clearTimeout(topSnap);
+  //       toAboutProcessing = false;
+  //     }
+  //   }, 500);
+  // };
+
+  // if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && !toAboutProcessing) {
+  //   clearTimeout(topSnap);
+  //   toAboutProcessing = true;
+  //   startTimeOut(values);
+  // }
+
+  // if (toAboutProcessing) {
+  //   if (Math.floor(scrollY) <= values.topLimit || Math.floor(scrollY) >= values.bottomLimit) {
+  //     toAboutProcessing = false;
+  //     clearTimeout(topSnap);
+  //   }
+  //   if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && !toAboutProcessing) {
+  //     clearTimeout(topSnap);
+  //     toAboutProcessing = true;
+  //     startTimeOut(values);
+  //   }
+  // }
+  // if (Math.floor(scrollY) === Math.floor(values.topLimit)) {
+  //   clearTimeout(topSnap);
+  //   toAboutProcessing = false;
+  // }
 
   let scrollValue = window.scrollY;
   stars.style.top = scrollValue * -0.4 + "px";
