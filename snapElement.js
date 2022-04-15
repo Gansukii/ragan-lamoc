@@ -1,8 +1,8 @@
-let snapAllowed = true;
-let toAboutDone = false;
-let toAboutProcessing = false;
-let topSnap;
-let values = {};
+// let snapAllowed = true;
+// let toAboutDone = false;
+// let toAboutProcessing = false;
+// let topSnap;
+// let values = {};
 
 const startTimeOut = (values) => {
   topSnap = setTimeout(() => {
@@ -42,37 +42,41 @@ const assignvalue = (element) => {
   };
 };
 
-window.onscroll = () => {
-  snapAllowed = true;
+// window.onscroll = () => {
+//   console.log("ngo");
+// };
 
-  if (topSnap) {
-    clearTimeout(topSnap);
-  }
-  toAboutProcessing = false;
+// window.onscroll = () => {
+//   snapAllowed = true;
 
-  assignvalue(contentAbout);
+//   if (topSnap) {
+//     clearTimeout(topSnap);
+//   }
+//   toAboutProcessing = false;
 
-  if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && !toAboutProcessing) {
-    clearTimeout(topSnap);
-    toAboutProcessing = true;
-    startTimeOut(values);
-  }
+//   assignvalue(contentAbout);
 
-  let b2 = toAboutProcessing;
+//   if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && !toAboutProcessing) {
+//     clearTimeout(topSnap);
+//     toAboutProcessing = true;
+//     startTimeOut(values);
+//   }
 
-  if (toAboutProcessing) {
-    if (Math.floor(scrollY) <= values.topLimit || Math.floor(scrollY) >= values.bottomLimit) {
-      toAboutProcessing = false;
-      clearTimeout(topSnap);
-    }
-    if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && !toAboutProcessing) {
-      clearTimeout(topSnap);
-      toAboutProcessing = true;
-      startTimeOut(values);
-    }
-  }
-  if (Math.floor(scrollY) === Math.floor(values.topLimit)) {
-    clearTimeout(topSnap);
-    toAboutProcessing = false;
-  }
-};
+//   let b2 = toAboutProcessing;
+
+//   if (toAboutProcessing) {
+//     if (Math.floor(scrollY) <= values.topLimit || Math.floor(scrollY) >= values.bottomLimit) {
+//       toAboutProcessing = false;
+//       clearTimeout(topSnap);
+//     }
+//     if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && !toAboutProcessing) {
+//       clearTimeout(topSnap);
+//       toAboutProcessing = true;
+//       startTimeOut(values);
+//     }
+//   }
+//   if (Math.floor(scrollY) === Math.floor(values.topLimit)) {
+//     clearTimeout(topSnap);
+//     toAboutProcessing = false;
+//   }
+// };
