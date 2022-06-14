@@ -219,3 +219,7 @@ html {
     display: none;
   }
 }
+
+#section img {
+  transition: 0.2s ease-out;
+}
