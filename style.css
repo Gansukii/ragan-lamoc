@@ -223,3 +223,7 @@ html {
 #section img {
   transition: 0.2s ease-out;
 }
+
+.row {
+  max-width: 1560px;
+}
