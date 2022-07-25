@@ -141,7 +141,7 @@ window.onscroll = () => {
     currentTab.classList.add("focus");
 
     assignvalue(contentProject);
-    if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit && !toAboutProcessing) {
+    if (Math.floor(scrollY) >= values.topLimit && Math.floor(scrollY) <= values.bottomLimit - 150 && !toAboutProcessing) {
       clearTimeout(topSnap);
       toAboutProcessing = true;
       startTimeOut(values);
